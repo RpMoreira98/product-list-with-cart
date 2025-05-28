@@ -9,12 +9,12 @@ type CardListCandy = {
 export const CardList = ({ cardList }: CardListCandy) => {
   const addToCart = useCartStore((state) => state.addToCart);
   return (
-    <div>
+    <div className="">
       <Image
         src={cardList.image}
         alt={cardList.title}
-        width={200}
-        height={150}
+        width={250}
+        height={200}
       />
       <h3>{cardList.title}</h3>
       <p>{cardList.text}</p>

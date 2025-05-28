@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className="container p-6 lg:p-20 mx-auto">
       <h1 className="text-4xl font-bold text-rose-950 mb-6">Deserts</h1>
-      <div>
+      <div className="grid grid-cols-1 lg:grid-cols-70-30 gap-8 place-items-start">
         <CardComponents />
       </div>
     </div>
