@@ -43,18 +43,18 @@ export const Candy: CandyList[] = [
   },
   {
     id: 5,
-    image: "/image-cake-desktop.jpg",
-    text: "Red Velvet Cake",
-    title: "Cake",
-    value: 4.5,
-    amount: 0,
-  },
-  {
-    id: 6,
     image: "/image-meringue-desktop.jpg",
     text: "Lemon Meringue Pie",
     title: "Pie",
     value: 5,
+    amount: 0,
+  },
+  {
+    id: 6,
+    image: "/image-cake-desktop.jpg",
+    text: "Red Velvet Cake",
+    title: "Cake",
+    value: 4.5,
     amount: 0,
   },
   {
