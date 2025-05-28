@@ -1,5 +1,3 @@
-// store/useCartStore.ts
-
 import { create } from "zustand";
 import { CandyList } from "@/types/candyList";
 
