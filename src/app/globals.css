@@ -5,6 +5,27 @@
   --foreground: #171717;
 }
 
+@font-face {
+  font-family: "RedHatText";
+  src: url("/fonts/RedHatText-Bold.ttf") format("truetype");
+  font-weight: 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RedHatText";
+  src: url("/fonts/RedHatText-SemiBold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RedHatText";
+  src: url("/fonts/RedHatText-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -14,7 +35,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: hsl(20 50% 98% / var(--tw-bg-opacity));
+    --background: #fcf9f7;
     --foreground: #ededed;
   }
 }
@@ -22,5 +43,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "RedHatText", monospace !important;
 }
