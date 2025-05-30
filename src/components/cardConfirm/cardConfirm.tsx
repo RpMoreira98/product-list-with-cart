@@ -6,7 +6,7 @@ export const CardConfirm = () => {
 
   const total = cart.reduce((acc, item) => acc + item.value * item.amount, 0);
   return (
-    <div className="bg-white w-[400px] p-4 py-6 rounded-sm">
+    <div className="bg-white w-[400px] p-4 py-6 rounded-lg">
       <h1 className="text-red-500 font-extrabold text-xl">
         Your Cart ({cart.length})
       </h1>
@@ -32,11 +32,14 @@ export const CardConfirm = () => {
               >
                 <div className="flex flex-col items-start">
                   <h1 className="text-black text-sm font-bold">{item.text}</h1>
-                  <div className="flex justify-between gap-3 text-rose-500">
-                    <div className="flex gap-2">
+                  <div className="flex justify-between gap-3 text-rose-400">
+                    <div className="flex justify-center gap-2">
                       <span className="text-xs">{item.amount}x</span>
+                      <span className="text-xs text-gray-500">
+                        ${item.value.toFixed(2)}
+                      </span>
                       <span className="text-xs">
-                        $ {(item.value * item.amount).toFixed(2)}
+                        ${(item.value * item.amount).toFixed(2)}
                       </span>
                     </div>
                   </div>
