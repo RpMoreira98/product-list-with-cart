@@ -32,16 +32,26 @@ export const CartButons = ({ item }: CartButtonsType) => {
     <div className="absolute justify-between items-center py-2 px-4 rounded-full bottom-[-1.2rem] bg-[#C73A0F] left-2/4 -translate-x-1/2 flex gap-6 min-w-36">
       <button
         onClick={() => decreaseAmount(item.id)}
-        className="cursor-pointer"
+        className="cursor-pointer border w-5 p-1 rounded-full"
       >
-        -
+        <Image
+          src={"icon-decrement-quantity.svg"}
+          alt={item.title}
+          width={10}
+          height={10}
+        />
       </button>
       <span className="text-white font-semibold">{amount}</span>
       <button
         onClick={() => increaseAmount(item.id)}
-        className="cursor-pointer"
+        className="cursor-pointer border p-1 rounded-full"
       >
-        +
+        <Image
+          src={"icon-increment-quantity.svg"}
+          alt={item.title}
+          width={10}
+          height={10}
+        />
       </button>
     </div>
   );
