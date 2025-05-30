@@ -1,8 +1,11 @@
 import { useCartStore } from "@/store/stores";
 import Image from "next/image";
+import { useState } from "react";
+import { ModalConfimation } from "../modalConfimation/modalConfirmation";
 
 export const CardConfirm = () => {
   const { cart, removeFromCart } = useCartStore();
+  const { isModalOpen, setIsModalOpen } = useState(false);
 
   const total = cart.reduce((acc, item) => acc + item.value * item.amount, 0);
   return (
@@ -67,9 +70,19 @@ export const CardConfirm = () => {
           <div>
             <h3></h3>
           </div>
-          <button className="w-full cursor-pointer px-2 py-2 mt-3 font-bold bg-red-700 hover:bg-red-800 rounded-full">
-            Confirme Order
-          </button>
+          <>
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="w-full cursor-pointer px-2 py-2 mt-3 font-bold bg-red-700 hover:bg-red-800 rounded-full"
+            >
+              Confirme Order
+            </button>
+
+            <ModalConfimation
+              isOpen={isModalOpen}
+              onClose={() => setIsModalOpen(false)}
+            />
+          </>
         </div>
       )}
     </div>
