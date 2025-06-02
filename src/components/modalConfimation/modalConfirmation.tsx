@@ -28,12 +28,12 @@ export const ModalConfimation = ({ isOpen, onClose }: Modal) => {
       </div>
       <div className="bg-white rounded-lg w-[22rem] p-8">
         <div className="bg-white pb-3 w-[90%] max-w-md text-center">
-          <div className="w-10 h-10 border-4 border-green-500 rounded-full flex items-center justify-center">
+          <div>
             <Image
-              src={"/icons-check.svg"}
+              src={"/icon-order-confirmed.svg"}
               alt="check-icon"
-              height={20}
-              width={25}
+              height={48}
+              width={48}
             />
           </div>
         </div>
