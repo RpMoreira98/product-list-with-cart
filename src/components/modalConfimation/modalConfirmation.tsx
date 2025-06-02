@@ -12,14 +12,23 @@ export const ModalConfimation = ({ isOpen, onClose }: Modal) => {
 
   const handleSubmitModal = () => {
     clearCart();
+  };
+
+  const handleCloseModal = () => {
     onClose();
   };
 
   return (
     <div className="fixed inset-0 bg-[#e2e0de42] flex flex-col justify-center items-center z-50">
+      <div
+        className="text-black text-4xl cursor-pointer absolute top-2 right-2"
+        onClick={handleCloseModal}
+      >
+        X
+      </div>
       <div className="bg-white rounded-lg w-[22rem] p-8">
         <div className="bg-white pb-3 w-[90%] max-w-md text-center">
-          <div className="w-10 h-10 border-2 border-green-500 rounded-full flex items-center justify-center">
+          <div className="w-10 h-10 border-4 border-green-500 rounded-full flex items-center justify-center">
             <Image
               src={"/icons-check.svg"}
               alt="check-icon"
@@ -70,7 +79,7 @@ export const ModalConfimation = ({ isOpen, onClose }: Modal) => {
         </div>
         <button
           onClick={handleSubmitModal}
-          className="bg-[#c73620] text-white mt-4 py-2 px-6 w-full rounded-full font-semibold hover:bg-red-700"
+          className="bg-[#c73620] cursor-pointer text-white mt-4 py-2 px-6 w-full rounded-full font-semibold hover:bg-red-700"
         >
           Submit new Order
         </button>
